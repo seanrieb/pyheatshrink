@@ -7173,9 +7173,9 @@ static void __pyx_tp_dealloc_10heatshrink_4core_Writer(PyObject *o) {
   {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
-    ++Py_REFCNT(o);
+    Py_INCREF(o);
     __pyx_pw_10heatshrink_4core_6Writer_3__dealloc__(o);
-    --Py_REFCNT(o);
+    Py_DECREF(o);
     PyErr_Restore(etype, eval, etb);
   }
   (*Py_TYPE(o)->tp_free)(o);
@@ -7207,7 +7207,7 @@ static PyTypeObject __pyx_type_10heatshrink_4core_Writer = {
   sizeof(struct __pyx_obj_10heatshrink_4core_Writer), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_10heatshrink_4core_Writer, /*tp_dealloc*/
-  0, /*tp_print*/
+  0, /*tp_vectorcall_offset*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
   #if PY_MAJOR_VERSION < 3
@@ -7283,9 +7283,9 @@ static void __pyx_tp_dealloc_10heatshrink_4core_Reader(PyObject *o) {
   {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
-    ++Py_REFCNT(o);
+    Py_INCREF(o);
     __pyx_pw_10heatshrink_4core_6Reader_3__dealloc__(o);
-    --Py_REFCNT(o);
+    Py_DECREF(o);
     PyErr_Restore(etype, eval, etb);
   }
   (*Py_TYPE(o)->tp_free)(o);
@@ -7317,7 +7317,7 @@ static PyTypeObject __pyx_type_10heatshrink_4core_Reader = {
   sizeof(struct __pyx_obj_10heatshrink_4core_Reader), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_10heatshrink_4core_Reader, /*tp_dealloc*/
-  0, /*tp_print*/
+  0, /*tp_vectorcall_offset*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
   #if PY_MAJOR_VERSION < 3
@@ -7424,7 +7424,7 @@ static PyTypeObject __pyx_type_10heatshrink_4core___pyx_scope_struct___drain = {
   sizeof(struct __pyx_obj_10heatshrink_4core___pyx_scope_struct___drain), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_10heatshrink_4core___pyx_scope_struct___drain, /*tp_dealloc*/
-  0, /*tp_print*/
+  0, /*tp_vectorcall_offset*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
   #if PY_MAJOR_VERSION < 3
@@ -7926,7 +7926,7 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
   if (PyType_Ready(&__pyx_type_10heatshrink_4core_Writer) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
-  __pyx_type_10heatshrink_4core_Writer.tp_print = 0;
+  __pyx_type_10heatshrink_4core_Writer.tp_vectorcall_offset = 0;
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_10heatshrink_4core_Writer.tp_dictoffset && __pyx_type_10heatshrink_4core_Writer.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_10heatshrink_4core_Writer.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
@@ -7934,7 +7934,7 @@ static int __Pyx_modinit_type_init_code(void) {
   if (__Pyx_setup_reduce((PyObject*)&__pyx_type_10heatshrink_4core_Writer) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
   __pyx_ptype_10heatshrink_4core_Writer = &__pyx_type_10heatshrink_4core_Writer;
   if (PyType_Ready(&__pyx_type_10heatshrink_4core_Reader) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
-  __pyx_type_10heatshrink_4core_Reader.tp_print = 0;
+  __pyx_type_10heatshrink_4core_Reader.tp_vectorcall_offset = 0;
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_10heatshrink_4core_Reader.tp_dictoffset && __pyx_type_10heatshrink_4core_Reader.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_10heatshrink_4core_Reader.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
@@ -7942,7 +7942,7 @@ static int __Pyx_modinit_type_init_code(void) {
   if (__Pyx_setup_reduce((PyObject*)&__pyx_type_10heatshrink_4core_Reader) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
   __pyx_ptype_10heatshrink_4core_Reader = &__pyx_type_10heatshrink_4core_Reader;
   if (PyType_Ready(&__pyx_type_10heatshrink_4core___pyx_scope_struct___drain) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
-  __pyx_type_10heatshrink_4core___pyx_scope_struct___drain.tp_print = 0;
+  __pyx_type_10heatshrink_4core___pyx_scope_struct___drain.tp_vectorcall_offset = 0;
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_10heatshrink_4core___pyx_scope_struct___drain.tp_dictoffset && __pyx_type_10heatshrink_4core___pyx_scope_struct___drain.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_10heatshrink_4core___pyx_scope_struct___drain.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
